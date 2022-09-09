@@ -20,6 +20,32 @@
   * ```Data exploration```
   * ```Dimensionality reduction methods in relation to the performance of Machine Learning (ML) models```
   
- ## Data Exploration
+## Data Exploration
  
- ## Dimensionality reduction methods
+* In data exploration, the following criteria were analyzed:
+ 
+  * Total number of attributes and instances
+
+  * Which variables are numeric? Which are categorical?
+
+  * Distribution of the Performance Standard Indication variable
+
+  * Frequency with which each school appears in the dataset
+
+  * Frequency with which each county appears in the dataset
+
+  * Is there any linear relationship between the descriptors?
+ 
+## Dimensionality reduction methods
+  
+* First, an average of the descriptors of each theme was created, respectively:
+  
+  ![themes_avg1](/images/themes_avg1.png)
+  
+  ![themes_avg2](/images/themes_avg2.png)
+
+* Then, 4 lists (m1, m2, m3, m4) were created with the average score of each municipality in relation to each theme, in which a pairplot and a correlation matrix were plotted:
+   
+  ![pairplot](/images/pairplot.png)
+  
+  ![corr_matrix](/images/corr_matrix.png)
