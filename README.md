@@ -56,10 +56,18 @@
 
 ## Dimensionality Reduction Methods
 
-* Summary
+### Summary
 
   |***Features***|***Target***|
   |:--:|:--:|
   |D16 D42 D57 D76 D78 D71 D40 D52 D58 D65 D19 D67 D72 D28 D24 D64 D49 D50 D54 D55 D51 D53 D56 D20|Performance Standard Indication (Indicação do Padrão de Desempenho)| 
 
 * The ``Performance Standard Indication`` target is a categorical variable and can have 4 different values, namely: {'Critical', 'Very Critical', 'Intermediate', 'Adequate'}. In this way, it is necessary to transform these values from type ***text*** (string) to type ***integer*** (numerical)
+
+### Low Variance Filter
+
+### Random Forests
+
+### Principal Component Analysis (PCA)
+
+## Conclusion
