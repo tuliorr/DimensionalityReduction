@@ -35,8 +35,8 @@
   * Frequency with which each county appears in the dataset
 
   * Is there any linear relationship between the descriptors?
- 
-## Dimensionality reduction methods
+
+## Correlation Between Themes
   
 * First, an average of the descriptors of each theme was created, respectively:
   
@@ -49,3 +49,19 @@
   ![pairplot](/images/pairplot.png)
   
   ![corr_matrix](/images/corr_matrix.png)
+  
+* Analyzing the pairplot, we can verify that there is a positive linear correlation between the themes, which represent the descriptors
+
+* It is observed that themes I, II and III have a higher linear correlation compared to theme IV which, nevertheless, still has a high correlation, that is, close to 1.
+
+## Dimensionality Reduction Methods
+
+* Summary
+
+  **Features:**
+  
+    ``D16 D42 D57 D76 D78 D71 D40 D52 D58 D65 D19 D67 D72 D28 D24 D64 D49 D50 D54 D55 D51 D53 D56 D20``
+  
+  **Target:**
+  
+    ``Indicação do Padrão de Desempenho``
