@@ -89,7 +89,7 @@ A great advantage of a random forest is that it allows you to get an idea about 
 By looking at the feature importance, you can decide which features to drop because they don’t contribute enough for making the model. This is important because of the following reasons.
 * Removing the least important features will increase the accuracy of the model. This is because we remove the noise by removing unnecessary features
 * By removing the unnecessary features, you will avoid the problem of overfitting.
-* A lesser amount of features also reduces training tim
+* A lesser amount of features also reduces training time
 
 Source: https://towardsdatascience.com/random-forests-an-ensemble-of-decision-trees-37a003084c6c
 
