@@ -80,6 +80,22 @@ The ``Performance Standard Indication`` target is a categorical variable and can
 
 ### Low Variance Filter
 
+This method aims to remove the features that have the lowest values of variance, which have low dispersion and values close to the mean. In this way, these features interfere less with the target when compared to those with greater variance.
+
+STEPS
+
+1. Pre-processing of features using MinMaxScaler (except the target)
+
+2. Calculate variance and sort values by descending order
+
+3. Create a new index with the features arranged by variance in descending order
+
+4. Run a loop that tests all combinations of features and returns performance metrics for each one
+
+FIGURE
+
+It can be seen from the Figure above that the accuracy increases with the increase of the features until reaching equilibrium in a range of values
+
 ### Random Forests
 
 Random forests is a tree-based model which is widely used for regression and classification tasks on non-linear data. It can also be used for feature selection with its built-in feature_importances_ attribute which calculates feature importance scores for each feature based on the ‘gini’ criterion (a measure of the quality of a split of internal nodes) while training the model.
