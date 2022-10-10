@@ -110,9 +110,9 @@ Thus, the model presents the best accuracy using 22 features organized by varian
 
 ### Random Forests
 
-Random forests is a tree-based model which is widely used for regression and classification tasks on non-linear data. It can also be used for feature selection with its built-in feature_importances_ attribute which calculates feature importance scores for each feature based on the ‘gini’ criterion (a measure of the quality of a split of internal nodes) while training the model.
+Random forests is a tree-based model which is widely used for regression and classification tasks on non-linear data. A great advantage of a random forest is that it allows you to get an idea about the relative importance of each feature based on a score computed during the training phase. For this, he Scikit-learn RandomForestClassifier provides an attribute called feature_importances_. This returns an array of values which sum to 1. The higher the score, the more important the feature. 
 
-A great advantage of a random forest is that it allows you to get an idea about the relative importance of each feature based on a score computed during the training phase. For this, he Scikit-learn RandomForestClassifier provides an attribute called feature_importances_. This returns an array of values which sum to 1. The higher the score, the more important the feature. The score is calculated based on the Gini impurity which measures the quality of a split (the lower the Gini, the better the split). Features with splits that have a greater mean decrease in Gini impurity are considered more important.
+The score is calculated based on the Gini impurity which measures the quality of a split (the lower the Gini, the better the split). Features with splits that have a greater mean decrease in Gini impurity are considered more important.
 
 By looking at the feature importance, you can decide which features to drop because they don’t contribute enough for making the model. This is important because of the following reasons.
 * Removing the least important features will increase the accuracy of the model. This is because we remove the noise by removing unnecessary features
@@ -120,6 +120,26 @@ By looking at the feature importance, you can decide which features to drop beca
 * A lesser amount of features also reduces training time
 
 Source: https://towardsdatascience.com/random-forests-an-ensemble-of-decision-trees-37a003084c6c
+
+STEPS
+
+1. Fit data with Scikit-learn RandomForestClassifier (data already transformed) and calculate feature importance
+
+  ![rdf_importance](/images/rdf_importance.png)
+
+2. Create a new index with the features arranged by importance in descending order
+
+3. Run a loop that tests all combinations of features and returns performance metrics for each one
+
+  ![rdf_loop](/images/rdf_loop.png)
+  
+  ![results2](/images/results2.png)
+  
+This model has lower accuracy using 1 features ('D16') and that accuracy increases with the addition of features, as shown in the Figure above. However, the accuracy stabilizes in the range between 0.90 and 0.93 from 10 features and reaches its maximum value with 18 features.
+
+The model showed better accuracy using 18 features arranged by variance in descending order, namely: 'D16', 'D57', 'D50', 'D67', 'D65', 'D58', 'D78', 'D76' , 'D72', 'D42', 'D28', 'D19', 'D64', 'D52', 'D53', 'D55', 'D54', 'D20'.
+
+  ![best_result2](/images/best_result2.png)
 
 ### Principal Component Analysis (PCA)
 
