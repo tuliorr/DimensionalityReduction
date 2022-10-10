@@ -78,6 +78,8 @@ Source: https://towardsdatascience.com/11-dimensionality-reduction-techniques-yo
 
 The ``Performance Standard Indication`` target is a categorical variable and can have 4 different values, namely: {'Critical', 'Very Critical', 'Intermediate', 'Adequate'}. In this way, it is necessary to transform these values from type ***text*** (string) to ***integer*** (numerical)
 
+  ![performance_transf](/images/performance_transf.png)
+
 ### Low Variance Filter
 
 This method aims to remove the features that have the lowest values of variance, which have low dispersion and values close to the mean. In this way, these features interfere less with the target when compared to those with greater variance.
