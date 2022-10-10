@@ -106,6 +106,8 @@ It is noteworthy that the accuracy remains stable even after adding the last two
 
 Thus, the model presents the best accuracy using 22 features organized by variance in descending order, namely: 'D16', 'D42', 'D57', 'D76', 'D78', 'D71', 'D40', 'D52', 'D58', 'D65', 'D19', 'D67', 'D72', 'D28', 'D24', 'D24', 'D64', 'D49', 'D50', 'D54 ', 'D55', 'D51', 'D53'.
 
+  ![best_result1](/images/best_result1.png)
+
 ### Random Forests
 
 Random forests is a tree-based model which is widely used for regression and classification tasks on non-linear data. It can also be used for feature selection with its built-in feature_importances_ attribute which calculates feature importance scores for each feature based on the ‘gini’ criterion (a measure of the quality of a split of internal nodes) while training the model.
