@@ -78,23 +78,33 @@ Source: https://towardsdatascience.com/11-dimensionality-reduction-techniques-yo
 
 The ``Performance Standard Indication`` target is a categorical variable and can have 4 different values, namely: {'Critical', 'Very Critical', 'Intermediate', 'Adequate'}. In this way, it is necessary to transform these values from type ***text*** (string) to ***integer*** (numerical)
 
+  ![performance_transf](/images/performance_transf.png)
+
 ### Low Variance Filter
 
-This method aims to remove the features that have the lowest values of variance, which have low dispersion and values close to the mean. In this way, these features interfere less with the target when compared to those with greater variance.
+This method aims to remove features that have the lowest values of variance, which have low dispersion and values close to the mean. In this way, these features interfere less with the target when compared to those with greater variance.
 
 STEPS
 
-1. Pre-processing of features using MinMaxScaler (except the target)
+1. Pre-processing features using MinMaxScaler (except the target)
 
 2. Calculate variance and sort values by descending order
+
+  ![steps1e2](/images/steps1e2.png)
 
 3. Create a new index with the features arranged by variance in descending order
 
 4. Run a loop that tests all combinations of features and returns performance metrics for each one
 
-FIGURE
+  ![steps3e4](/images/steps3e4.png)
+  
+  ![results1](/images/results1.png)
 
-It can be seen from the Figure above that the accuracy increases with the increase of the features until reaching equilibrium in a range of values
+In the figure above, it can be seen that this model has an accuracy lower than 86% using until 4 features ('D16', 'D42', 'D57', 'D76') and this value increases with the addition of resources. From 14 resources, the accuracy does not present a relevant increase and reaches its maximum value of 92% with 22 resources.
+
+It is noteworthy that the accuracy remains stable even after adding the last two features ('D56', 'D20').
+
+Thus, the model presents the best accuracy using 22 features organized by variance in descending order, namely: 'D16', 'D42', 'D57', 'D76', 'D78', 'D71', 'D40', 'D52', 'D58', 'D65', 'D19', 'D67', 'D72', 'D28', 'D24', 'D24', 'D64', 'D49', 'D50', 'D54 ', 'D55', 'D51', 'D53'.
 
 ### Random Forests
 
