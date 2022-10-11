@@ -143,13 +143,9 @@ The model showed better accuracy using 18 features arranged by variance in desce
 
 ### Principal Component Analysis (PCA)
 
-PCA is a linear dimensionality reduction technique. It transforms a set of correlated variables (p) into a smaller k (k<p) number of uncorrelated variables called principal components while retaining as much of the variation in the original dataset as possible.
+PCA is a linear dimensionality reduction technique. It transforms a set of correlated variables (p) into a smaller k (k<p) number of uncorrelated variables called principal components while retaining as much of the variation in the original dataset as possible. With these components, it is possible to reconstruct the original features — not exactly but generally close enough. The PCA algorithm actively attempts to minimize the reconstruction error during its search for the optimal components. By reducing the dimensionality of the data, PCA will reduce the size of the data improving the performance of machine learning algorithms. PCA is an unsupervised technique, meaning that it does not use the information from the target vector and instead only considers the feature matrix.
 
 The main concept behind the PCA is to consider the correlation among features. If the correlation is very high among a subset of the features, PCA will attempt to combine the highly correlated features and represent this data with a smaller number of linearly uncorrelated features. The algorithm keeps performing this correlation reduction, finding the directions of maximum variance in the original high-dimensional data and projecting them onto a smaller dimensional space. These newly derived components are known as principal components.
-
-With these components, it is possible to reconstruct the original features — not exactly but generally close enough. The PCA algorithm actively attempts to minimize the reconstruction error during its search for the optimal components.
-
-By reducing the dimensionality of the data, PCA will reduce the size of the data improving the performance of machine learning algorithms. PCA is an unsupervised technique, meaning that it does not use the information from the target vector and instead only considers the feature matrix.
 
 Source: https://towardsdatascience.com/principal-component-analysis-pca-with-scikit-learn-1e84a0c731b0
 
