@@ -153,4 +153,24 @@ By reducing the dimensionality of the data, PCA will reduce the size of the data
 
 Source: https://towardsdatascience.com/principal-component-analysis-pca-with-scikit-learn-1e84a0c731b0
 
+STEPS
+
+1. Run a loop that tests all number of components according to number of features
+
+2. Fit the model with X and apply the dimensionality reduction on X with ``fit_transform`` from scikit-learn
+
+ ![pca](/images/pca.png)
+
+3. Plot the accuracy metric according to number of components
+
+ ![pca_plot](/images/pca_plot.png)
+ 
+The accuracy values are dispersed in relation to the number of components and do not have a directly proportional relationship, as shown in the Figure above. The highest accuracy value was used using 9 components.
+
+ ![best_result3](/images/best_result3.png)
+  
 ## Conclusion
+
+After analyzing the three dimensionality reduction methods described in this work, namely: variance, tree and PCA, it is concluded that the PCA method obtained the best accuracy (0.95) using the least amount of components (9), according to the Figure below:
+
+ ![conclusion](/images/conclusion.png)
