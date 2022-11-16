@@ -3,8 +3,9 @@
 ## Intro
 * This project was developed as a form of evaluation of the course "Dimensionality Reduction" in the MBA in Data Science at the University of Fortaleza.
 
-## Objetive
-* This project aims to analyze the mathematical descriptors of the senior year in Brazilian schools
+## Objetives
+* This project aims to analyze the mathematical descriptors of the senior year in Brazilian schools and analyze the following question:
+  * Which dimensionality reduction method achieves the best accuracy and how many variables are needed to achieve this accuracy?
 
 ## Description
 * The Mathematics reference matrix is composed of four themes, related to skills developed by students. Within each theme there is a set of descriptors linked to the skills developed. The set of descriptors is different in each series evaluated.
